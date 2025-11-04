@@ -1,7 +1,9 @@
 load("@rules_rust//rust:defs.bzl", "rust_library")
 
 rust_library(
-    name = "mod",
+    name = "utils",
+    crate_name = "utils",
+    crate_root = "mod.rs",
     srcs = [
         "mod.rs",
         "validation.rs",

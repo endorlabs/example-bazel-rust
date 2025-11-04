@@ -6,8 +6,8 @@ rust_binary(
     deps = [
         "@crates//:serde",
         "@crates//:serde_json",
-        "//src/utils:mod",
-        "//src/http:mod",
-        "//src/db:mod",
+        "//src/utils:utils",
+        "//src/http:http",
+        "//src/db:db",
     ],
 )

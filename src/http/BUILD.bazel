@@ -1,7 +1,9 @@
 load("@rules_rust//rust:defs.bzl", "rust_library")
 
 rust_library(
-    name = "mod",
+    name = "http",
+    crate_name = "http",
+    crate_root = "mod.rs",
     srcs = [
         "mod.rs",
         "response.rs",
@@ -10,9 +12,7 @@ rust_library(
     visibility = ["//visibility:public"],
     deps = [
         "@crates//:anyhow",
-        "@crates//:reqwest",
         "@crates//:serde",
         "@crates//:serde_json",
-        "@crates//:tokio",
     ],
 )

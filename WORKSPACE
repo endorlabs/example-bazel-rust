@@ -16,7 +16,7 @@ load("@rules_rust//crate_universe:repositories.bzl", "crate_universe_dependencie
 
 rust_register_toolchains(
     edition = "2021",
-    versions = ["1.91.0"],
+    versions = ["1.77.0"],
 )
 
 crate_universe_dependencies()
@@ -33,12 +33,14 @@ crates_repository(
         "serde_json": crate.spec(version = "1.0"),
         "regex": crate.spec(version = "1.10"),
         "uuid": crate.spec(version = "1.5", features = ["v4", "serde"]),
-        "reqwest": crate.spec(version = "0.11", features = ["json"]),
         "anyhow": crate.spec(version = "1.0"),
         "chrono": crate.spec(version = "0.4", features = ["serde"]),
         "rand": crate.spec(version = "0.8"),
         "base64": crate.spec(version = "0.21"),
         "tokio": crate.spec(version = "1.35", features = ["full"]),
+        "protobuf": crate.spec(version = "2.27"),
+        "protobuf-codegen": crate.spec(version = "2.27"),
+        "writeable": crate.spec(version = "0.5"),
     },
 )
 
