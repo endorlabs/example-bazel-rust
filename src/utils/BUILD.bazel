@@ -1,0 +1,18 @@
+load("@rules_rust//rust:defs.bzl", "rust_library")
+
+rust_library(
+    name = "mod",
+    srcs = [
+        "mod.rs",
+        "validation.rs",
+        "encoding.rs",
+        "random.rs",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@crates//:regex",
+        "@crates//:uuid",
+        "@crates//:rand",
+        "@crates//:base64",
+    ],
+)
