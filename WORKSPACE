@@ -28,20 +28,12 @@ crates_repository(
     name = "crates",
     cargo_lockfile = "//:Cargo.lock",
     lockfile = "//:Cargo.Bazel.lock",
-    packages = {
-        "serde": crate.spec(version = "1.0", features = ["derive"]),
-        "serde_json": crate.spec(version = "1.0"),
-        "regex": crate.spec(version = "1.10"),
-        "uuid": crate.spec(version = "1.5", features = ["v4", "serde"]),
-        "anyhow": crate.spec(version = "1.0"),
-        "chrono": crate.spec(version = "0.4", features = ["serde"]),
-        "rand": crate.spec(version = "0.8"),
-        "base64": crate.spec(version = "0.21"),
-        "tokio": crate.spec(version = "1.35", features = ["full"]),
-        "protobuf": crate.spec(version = "2.27"),
-        "protobuf-codegen": crate.spec(version = "2.27"),
-        "writeable": crate.spec(version = "0.5"),
-    },
+    manifests = [
+        "//:Cargo.toml",
+        "//src/db:Cargo.toml",
+        "//src/http:Cargo.toml",
+        "//src/utils:Cargo.toml",
+    ],
 )
 
 load("@crates//:defs.bzl", "crate_repositories")

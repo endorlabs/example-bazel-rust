@@ -1,7 +1,7 @@
-use anyhow::Result;
 use serde_json::json;
 use super::response::ApiResponse;
 
+#[derive(Debug)]
 pub struct HttpClient;
 
 impl HttpClient {

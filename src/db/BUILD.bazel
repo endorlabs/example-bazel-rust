@@ -2,13 +2,12 @@ load("@rules_rust//rust:defs.bzl", "rust_library")
 
 rust_library(
     name = "db",
-    crate_name = "db",
-    crate_root = "mod.rs",
     srcs = [
+        "database.rs",
         "mod.rs",
         "record.rs",
-        "database.rs",
     ],
+    crate_root = "mod.rs",
     visibility = ["//visibility:public"],
     deps = [
         "@crates//:chrono",

@@ -2,19 +2,18 @@ load("@rules_rust//rust:defs.bzl", "rust_library")
 
 rust_library(
     name = "utils",
-    crate_name = "utils",
-    crate_root = "mod.rs",
     srcs = [
-        "mod.rs",
-        "validation.rs",
         "encoding.rs",
+        "mod.rs",
         "random.rs",
+        "validation.rs",
     ],
+    crate_root = "mod.rs",
     visibility = ["//visibility:public"],
     deps = [
+        "@crates//:base64",
+        "@crates//:rand",
         "@crates//:regex",
         "@crates//:uuid",
-        "@crates//:rand",
-        "@crates//:base64",
     ],
 )

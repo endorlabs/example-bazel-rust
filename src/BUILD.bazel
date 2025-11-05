@@ -4,10 +4,10 @@ rust_binary(
     name = "main",
     srcs = ["main.rs"],
     deps = [
+        "//src/db",
+        "//src/http",
+        "//src/utils",
         "@crates//:serde",
         "@crates//:serde_json",
-        "//src/utils:utils",
-        "//src/http:http",
-        "//src/db:db",
     ],
 )
