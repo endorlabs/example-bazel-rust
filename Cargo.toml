@@ -10,7 +10,7 @@ version = "0.1.0"
 edition = "2021"
 
 [package]
-name = "example_bazel_rust"
+name = "rules_rust_0_40_0"
 version.workspace = true
 edition.workspace = true
 

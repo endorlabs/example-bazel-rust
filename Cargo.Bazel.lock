@@ -1,5 +1,5 @@
 {
-  "checksum": "8dacc60c62a6e91fe4901ea7d4b873fdf7513ca718f4c89771c18e712d7efe66",
+  "checksum": "7da7d8afb56567a7568637fd2a42ba92ae61551cb3eff131731297d7c8c7eca3",
   "crates": {
     "aho-corasick 1.1.4": {
       "name": "aho-corasick",
@@ -502,37 +502,6 @@
             {
               "id": "uuid 1.18.1",
               "target": "uuid"
-            }
-          ],
-          "selects": {}
-        },
-        "edition": "2021",
-        "version": "0.1.0"
-      },
-      "license": null,
-      "license_ids": [],
-      "license_file": null
-    },
-    "example_bazel_rust 0.1.0": {
-      "name": "example_bazel_rust",
-      "version": "0.1.0",
-      "package_url": null,
-      "repository": null,
-      "targets": [],
-      "library_target_name": null,
-      "common_attrs": {
-        "compile_data_glob": [
-          "**"
-        ],
-        "deps": {
-          "common": [
-            {
-              "id": "serde 1.0.228",
-              "target": "serde"
-            },
-            {
-              "id": "serde_json 1.0.145",
-              "target": "serde_json"
             }
           ],
           "selects": {}
@@ -2024,6 +1993,37 @@
         "MIT"
       ],
       "license_file": "LICENSE-APACHE"
+    },
+    "rules_rust_0_40_0 0.1.0": {
+      "name": "rules_rust_0_40_0",
+      "version": "0.1.0",
+      "package_url": null,
+      "repository": null,
+      "targets": [],
+      "library_target_name": null,
+      "common_attrs": {
+        "compile_data_glob": [
+          "**"
+        ],
+        "deps": {
+          "common": [
+            {
+              "id": "serde 1.0.228",
+              "target": "serde"
+            },
+            {
+              "id": "serde_json 1.0.145",
+              "target": "serde_json"
+            }
+          ],
+          "selects": {}
+        },
+        "edition": "2021",
+        "version": "0.1.0"
+      },
+      "license": null,
+      "license_ids": [],
+      "license_file": null
     },
     "rustversion 1.0.22": {
       "name": "rustversion",
@@ -3631,8 +3631,8 @@
   "binary_crates": [],
   "workspace_members": {
     "db 0.1.0": "src/db",
-    "example_bazel_rust 0.1.0": "",
     "http 0.1.0": "src/http",
+    "rules_rust_0_40_0 0.1.0": "",
     "utils 0.1.0": "src/utils"
   },
   "conditions": {
