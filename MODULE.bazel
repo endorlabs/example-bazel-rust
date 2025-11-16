@@ -53,6 +53,6 @@ register_toolchains("@rust_toolchains//:all")
 #########################
 # Crate Universe (for dependency management)
 #########################
-# Note: crate_universe setup in bzlmod may require a separate .bzl file
-# For now, the toolchains are registered which should resolve the immediate error
-# The crate dependencies are already defined in Cargo.Bazel.lock
+# Note: crate_universe setup is handled in WORKSPACE file
+# This is because crate_universe in rules_rust 0.40.0 requires repository rules
+# which work better in WORKSPACE when used alongside bzlmod
